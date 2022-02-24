@@ -1,0 +1,43 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+	Scanner inputTaker = new Scanner(System.in);
+		int t = inputTaker.nextInt();
+		while(t >0){
+			long n = inputTaker.nextLong();
+			System.out.println(findSqrt(n));
+			t--;
+		}
+	}
+
+	public static long findSqrt(long n){
+		if(n == 0){
+			return 0;
+		}
+		if(n <= 3){
+			return 1;
+		}
+		long low = 1;
+		long high = n;
+		long result = 1;
+
+		while(low <= high){
+			long mid = low + (high-low)/2;
+			long midSquare = mid*mid;
+			if(midSquare <= n){
+				result = Math.max(result, mid);
+				low = mid + 1;
+			}else{
+				high = mid -1;
+			}
+		}
+
+		return result;
+
+                      // Your code here
+	}
+}
