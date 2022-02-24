@@ -1,0 +1,11 @@
+// A: contains first value
+// B: contains second value
+// You need to just swap the values
+
+static void Swap(){
+//Enter your code here  
+int temp=0;
+temp=A;
+A=B;
+B=temp;
+}
