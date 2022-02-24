@@ -1,0 +1,15 @@
+static String checkConevrtion(int a)
+ {
+       // your code here
+       String s=String.valueOf(a); 
+      
+      try {
+        Integer.parseInt( s );
+        
+    }
+    catch( Exception e ) {
+       
+    }
+      
+       return s;
+    }
