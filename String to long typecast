@@ -1,0 +1,9 @@
+static long checkConevrtion(String S)
+    {
+      
+    long l=Long.parseLong(S);  
+      //int d=(int)l;
+      
+      
+       return l;
+    }
