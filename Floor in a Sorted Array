@@ -1,0 +1,44 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+			Scanner inputTaker = new Scanner(System.in);
+		int t = inputTaker.nextInt();
+		while(t>0){
+			int n = inputTaker.nextInt();
+			int x = inputTaker.nextInt();
+			int[] arr = new int[n];
+			for(int i =0;i<n;i++){
+				arr[i] = inputTaker.nextInt();
+			}
+			System.out.println(getFloor(arr, n, x));
+
+			t--;
+		}
+	}
+
+	private static int getFloor(int[] arr, int n, int x){
+		int low = 0;
+		int high = n -1;
+		int resultValue = -1;
+		int resultIndex = -1;
+		while(low <= high){
+			int mid = low + (high-low)/2;
+			if(arr[mid] <= x){
+				if(resultValue <= arr[mid]){
+					resultValue = arr[mid];
+					resultIndex = mid;
+				}
+				low = mid + 1;
+			}else{
+				high = mid - 1;
+			}
+		}
+		return resultIndex;
+
+	}
+}
