@@ -1,0 +1,7 @@
+static int FahrenheitToCelsius(int F){
+    //Enter your code here
+    int Celsius=0;
+      Celsius  = ((F-32)*5)/9;  
+      return Celsius;
+
+    }
