@@ -1,0 +1,40 @@
+import java.io.*; // for handling input/output
+import java.util.*; // contains Collections framework
+
+// don't change the name of this class
+// you can add inner classes if needed
+class Main {
+	public static void main (String[] args) {
+                      // Your code here
+					  Scanner sc =new Scanner (System.in);
+					  int m1=sc.nextInt();
+					  int m2=sc.nextInt();
+					  int m3=sc.nextInt();
+					  int m4=sc.nextInt();
+					  int m5=sc.nextInt();
+					  float percentage;
+					  float total_marks;
+					  float average;
+					  total_marks=m1+m2+m3+m4+m5;
+					  average=total_marks/5;
+					  percentage = (float)((total_marks/500.0) * 100);
+					  
+					  if(percentage >=80)
+					  {
+						  System.out.println("A");
+					  }
+					  else if(percentage <80 && percentage >=60 )
+					  {
+						  System.out.println("B");
+					  }
+					  else if(percentage <60 && percentage >=40 )
+					  {
+						  System.out.println("C");
+					  }
+					  else
+					  {
+						   System.out.println("D");
+					  }
+	}
+
+}
